@@ -1,0 +1,111 @@
+/* Anything marked hidden stays hidden, even with an inline display style. */
+[hidden] { display: none !important; }
+
+/* Shared behaviour styles: mobile menu, form status messages. */
+nav[aria-label="Main"] { position: relative; z-index: 50; }
+
+.r-mobile-extra { display: none; }
+
+@media (max-width: 1100px) {
+  nav.r-menu-open .r-links {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 4px !important;
+    padding: 12px 24px 24px;
+    background: #ffffff;
+    box-shadow: 0 16px 32px rgba(0, 63, 69, 0.14);
+  }
+  nav.r-menu-open .r-links > a {
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #dbe7ea !important;
+  }
+  nav.r-menu-open .r-links > a.r-btn {
+    justify-content: center;
+    margin-top: 12px;
+    border-bottom: 0 !important;
+  }
+  nav.r-menu-open .r-mobile-extra { display: block; }
+}
+
+.r-form-status {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.r-form-status[data-kind="ok"] { background: #e1f9f9; color: #00343a; }
+.r-form-status[data-kind="error"] { background: #fdecec; color: #8a1f1f; }
+
+:focus-visible { outline: 3px solid #14cac8; outline-offset: 2px; }
+
+/* Refer a Participant panel: dot-art pattern blended into the brand teal. */
+.r-refer-wrap {
+  /* The teal layer on top fades the pattern; raise its alpha to make the pattern fainter. */
+  background:
+    linear-gradient(rgba(0, 86, 94, 0.75), rgba(0, 86, 94, 0.75)),
+    #00565e url(images/cta_bg_img.webp) center / cover no-repeat !important;
+  background-blend-mode: normal, multiply;
+}
+
+/* Hide the "We support the NDIS" badge on tablet and phone. */
+@media (max-width: 1100px) {
+  .r-refer { grid-template-columns: 1fr !important; }
+  .r-refer img[src$="we-support-ndis.png"] { display: none !important; }
+}
+
+/* Service page heroes: on phones the text covers the whole photo, so darken it evenly. */
+@media (max-width: 700px) {
+  .rs-hero-shade { background: rgba(0, 40, 45, 0.62) !important; }
+}
+
+/* SIL property detail pages */
+.pd-thumb { outline: 3px solid transparent; outline-offset: -3px; transition: outline-color .2s ease, opacity .2s ease; }
+.pd-thumb:hover { opacity: .85; }
+.pd-thumb[aria-pressed="true"] { outline-color: #14cac8; }
+@media (max-width: 1100px) {
+  .pd-gallery { grid-template-columns: 1fr !important; }
+  .pd-thumbs { position: static !important; grid-template-rows: none !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .pd-thumb { aspect-ratio: 4 / 3; }
+  .pd-layout { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .pd-enquiry { position: static !important; }
+  .pd-facts { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 700px) {
+  .pd-thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 8px !important; }
+  .pd-layout { padding-top: 40px !important; }
+}
+
+/* Referral form */
+.rf-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.rf-step { margin: 0; padding: 0; border: 0; min-width: 0; }
+.rf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.rf-opts { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px; }
+.rf-opt { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 16px; border: 1px solid #cfdcdf; border-radius: 12px; font-size: 16px; color: #2f3b3d; cursor: pointer; box-sizing: border-box; }
+.rf-opt input { width: 18px; height: 18px; margin: 0; flex-shrink: 0; accent-color: #00565e; }
+.rf-opt:has(input:checked) { border-color: #00565e; background: #e1f9f9; }
+.rf-consent { align-items: flex-start; line-height: 1.5; }
+.rf-consent input { margin-top: 2px; }
+.rf-sub { margin: 0; padding: 22px; border: 0; border-radius: 18px; background: #edf4f6; min-width: 0; }
+.rf-sub-title { float: left; width: 100%; margin: 0 0 16px; padding: 0; font-size: 17px; font-weight: 600; color: #00565e; }
+.rf-sub .rf-grid { clear: both; }
+.rf-marker { display: flex; align-items: center; gap: 14px; padding: 12px 0; font-size: 16px; font-weight: 500; color: #55676a; }
+.rf-marker-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; border: 2px solid #cfdcdf; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: #55676a; box-sizing: border-box; }
+.rf-marker[data-state="current"] { color: #2f3b3d; font-weight: 600; }
+.rf-marker[data-state="current"] .rf-marker-num { border-color: #00565e; background: #00565e; color: #ffffff; }
+.rf-marker[data-state="done"] .rf-marker-num { border-color: #14cac8; background: #14cac8; color: #00343a; }
+@media (max-width: 1100px) {
+  .rf-layout { grid-template-columns: 1fr !important; }
+  .rf-side { position: static !important; }
+  .rf-markers { display: none; }
+}
+@media (max-width: 700px) {
+  .rf-form { padding: 28px 20px !important; }
+  .rf-grid { grid-template-columns: 1fr; }
+  .rf-grid > label { grid-column: auto !important; }
+}

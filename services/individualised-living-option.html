@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Individualised Living Option (ILO) | Bharosa Community Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Yellowtail&amp;display=swap">
+<style>
+body{margin:0;font-family:'Outfit',system-ui,sans-serif;color:#2f3b3d;background:#ffffff}
+a{color:#00565e;text-decoration:none}a:hover{color:#003f45}
+.r-lift{outline:2px solid transparent;outline-offset:0;transition:transform .2s ease, outline-color .2s ease}
+.r-lift:hover,.r-lift:focus-visible{transform:translateY(-4px);outline-color:#14cac8}
+.r-svc:hover .r-svc-arrow{background:#00565e;color:#ffffff}
+.r-btn{transition:background-color .2s ease, color .2s ease}
+.r-btn-accent:hover{background:#3fd8d6 !important;color:#00343a !important}
+.r-btn-brand:hover{background:#003f45 !important;color:#ffffff !important}
+.r-btn-ghost:hover{background:#ffffff !important;color:#00565e !important}
+.r-nav-link:hover{color:#00565e !important}
+.r-faq summary{list-style:none}
+.r-faq summary::-webkit-details-marker{display:none}
+.r-faq[open] .r-faq-plus{transform:rotate(45deg);background:#00565e;color:#ffffff}
+.r-faq[open]{border-color:#9fd9da !important}
+@keyframes r-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.r-gal-track{animation:r-marquee 45s linear infinite}
+.r-gal:hover .r-gal-track,.r-gal:focus-within .r-gal-track{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.r-gal-track{animation:none}.r-gal{overflow-x:auto !important}.r-lift{transition:none}}
+@media (max-width: 1100px){
+.r-links{display:none !important}
+.r-burger{display:inline-flex !important}
+.r-pad{padding-left:40px !important;padding-right:40px !important}
+.r-hero{min-height:600px !important}
+.r-hero-h{font-size:50px !important}
+.r-trust{grid-template-columns:1fr 1fr !important}
+.r-2col{grid-template-columns:1fr !important;gap:56px !important}
+.r-3col{grid-template-columns:1fr !important}
+.r-news-card{flex-direction:row !important}
+.r-news-card img{width:300px !important;aspect-ratio:auto !important;height:auto !important;flex-shrink:0}
+.r-svc-grid{grid-template-columns:1fr 1fr !important}
+.r-h2{font-size:40px !important}
+.r-foot{grid-template-columns:1fr 1fr !important}
+.r-foot-brand{grid-column:1 / -1}
+.r-refer{padding-top:88px !important;padding-bottom:88px !important}
+}
+@media (max-width: 700px){
+.r-topbar{display:none !important}
+.r-pad{padding-left:20px !important;padding-right:20px !important}
+.r-hero{min-height:560px !important}
+.r-hero-h{font-size:38px !important}
+.r-hero-label{display:none !important}
+.r-trust{grid-template-columns:1fr !important;margin-top:-40px !important}
+.r-2col{gap:40px !important}
+.r-svc-grid{grid-template-columns:1fr !important}
+.r-values{grid-template-columns:1fr !important}
+.r-h2{font-size:32px !important}
+.r-news-card{flex-direction:column !important}
+.r-news-card img{width:100% !important;aspect-ratio:460 / 260 !important}
+.r-gal-tile{width:240px !important;height:190px !important}
+.r-tst-fig{padding:40px 22px 28px !important}
+.r-refer{grid-template-columns:1fr !important;padding-top:72px !important;padding-bottom:72px !important}
+.r-refer-wrap{border-radius:0 64px 0 0 !important}
+.r-foot{grid-template-columns:1fr !important}
+.r-foot-svc{grid-template-columns:1fr !important}
+}
+@media (max-width: 1100px){
+[style*="width: 844px"]{width:auto !important;max-width:100% !important}
+.ra-values{grid-template-columns:repeat(4, minmax(0, 1fr)) !important}
+.ra-values li{min-height:260px !important}
+.ra-h1{font-size:54px !important}
+}
+@media (max-width: 700px){
+.ra-h1{font-size:42px !important}
+.ra-values{grid-template-columns:repeat(2, minmax(0, 1fr)) !important}
+.ra-facts{grid-template-columns:1fr !important}
+.ra-card-h{font-size:24px !important}
+}
+@media (max-width: 1100px){
+.rs-cards{grid-template-columns:repeat(2, minmax(0, 1fr)) !important}
+.rs-h1{font-size:50px !important}
+}
+@media (max-width: 700px){
+.rs-cards{grid-template-columns:1fr !important}
+.rs-h1{font-size:38px !important}
+.rs-hero{border-bottom-right-radius:56px !important}
+.rs-hero-label{display:none}
+.rs-form-grid{grid-template-columns:1fr !important}
+}
+</style>
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header style="width: 100%; position: relative; z-index: 2">
+<div class="r-topbar" style="background: #00565e; color: #ffffff">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 44px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 28px">
+<a href="mailto:info@bharosa.com.au" style="display: flex; align-items: center; gap: 10px; color: #ffffff; font-weight: 500"><svg aria-hidden="true" width="15" height="12" viewBox="0 0 24 18" fill="currentColor"><path d="M0 2.5A2.5 2.5 0 0 1 2.5 0h19A2.5 2.5 0 0 1 24 2.5v.6l-12 7.4L0 3.1v-.6zm0 3 11.5 7.1a1 1 0 0 0 1 0L24 5.5v10A2.5 2.5 0 0 1 21.5 18h-19A2.5 2.5 0 0 1 0 15.5v-10z"></path></svg>info@bharosa.com.au</a>
+<a href="tel:1800862427" style="display: flex; align-items: center; gap: 10px; color: #ffffff; font-weight: 500"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.3 17.6 18 15.3a1.2 1.2 0 0 0-1.4.3l-2.3 2.9A17.8 17.8 0 0 1 5.5 9.7l2.9-2.3a1.2 1.2 0 0 0 .3-1.4L6.4.7A1.2 1.2 0 0 0 5 0L.9 1A1.2 1.2 0 0 0 0 2.1 21.9 21.9 0 0 0 21.9 24a1.2 1.2 0 0 0 1.2-.9l.9-4.1a1.2 1.2 0 0 0-.7-1.4z"></path></svg>1800 862 427</a>
+</div>
+<div style="display: flex; align-items: center; gap: 18px">
+<label style="display: flex; align-items: center; gap: 8px; color: #ffffff">
+<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Language</span>
+<select style="font-family: inherit; font-size: 14px; color: #ffffff; background: transparent; border: 0; height: 36px; padding: 0 4px; cursor: pointer">
+<option style="color: #2f3b3d">English</option>
+<option style="color: #2f3b3d">Nepali</option>
+<option style="color: #2f3b3d">Hindi</option>
+<option style="color: #2f3b3d">Punjabi</option>
+</select>
+</label>
+<span aria-hidden="true" style="width: 1px; height: 18px; background: rgba(255,255,255,0.35)"></span>
+<div style="display: flex; gap: 2px">
+<a target="_blank" rel="noopener" href="https://www.facebook.com/BharosaCommunityServices" aria-label="Facebook" style="width: 32px; height: 36px; display: flex; align-items: center; justify-content: center; color: #ffffff"><svg aria-hidden="true" width="8" height="14" viewBox="0 0 10 18" fill="currentColor"><path d="M6.5 18v-8.2h2.7l.4-3.2H6.5v-2c0-.9.3-1.6 1.6-1.6H9.8V.1C9.5.1 8.5 0 7.4 0 5 0 3.3 1.5 3.3 4.2v2.4H.6v3.2h2.7V18z"></path></svg></a>
+<a target="_blank" rel="noopener" href="https://www.instagram.com/bharosacommunityservices/" aria-label="Instagram" style="width: 32px; height: 36px; display: flex; align-items: center; justify-content: center; color: #ffffff"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="6"></rect><circle cx="12" cy="12" r="4.5"></circle></svg></a>
+<a target="_blank" rel="noopener" href="https://www.linkedin.com/company/bharosa-community-services/" aria-label="LinkedIn" style="width: 32px; height: 36px; display: flex; align-items: center; justify-content: center; color: #ffffff"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-7M11 13.5c0-2 1.3-3.5 3-3.5s3 1 3 3.5V17"></path></svg></a>
+</div>
+<a href="../contact.html" style="color: #ffffff; font-weight: 600">Contact Us</a>
+<span aria-hidden="true" style="width: 1px; height: 18px; background: rgba(255,255,255,0.35)"></span>
+<a target="_blank" rel="noopener" href="https://bharosa-ngotrainingcentre.talentlms.com/index" style="display: inline-flex; align-items: center; gap: 8px; color: #ffffff; font-weight: 600"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Staff Portal</a>
+</div>
+</div>
+</div>
+<nav aria-label="Main" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,63,69,0.08)">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 84px">
+<a href="../index.html" aria-label="Bharosa Community Services, Registered NDIS Provider, home" style="display: flex; align-items: center"><img src="../assets/images/logo-header.png" alt="Bharosa Community Services and I love NDIS Registered NDIS Provider logos" style="height: 56px; width: auto; display: block"></a>
+<div class="r-links" style="display: flex; align-items: center; gap: 40px; font-size: 17px; font-weight: 500">
+<a href="../index.html" class="r-nav-link" style="color: #2f3b3d; padding: 8px 0">Home</a>
+<a href="../about.html" class="r-nav-link" style="color: #2f3b3d; padding: 8px 0">About Us</a>
+<a href="../services.html" aria-current="page" style="color: #00565e; padding: 8px 0; border-bottom: 2px solid #14cac8">Our Services</a>
+<a href="../sil-vacancy.html" class="r-nav-link" style="color: #2f3b3d; padding: 8px 0">SIL Vacancy</a>
+<a href="../referrals.html" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 26px; border-radius: 26px; background: #00565e; color: #ffffff; font-weight: 600">Referrals<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<button type="button" class="r-burger" aria-label="Open menu" style="display: none; align-items: center; justify-content: center; width: 48px; height: 48px; border: 0; border-radius: 12px; background: #00565e; color: #ffffff; cursor: pointer"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+</div>
+</nav>
+</header>
+<main>
+<section aria-labelledby="service-heading" class="rs-hero" style="position: relative; min-height: 520px; background: #0d2f34; overflow: hidden; display: flex; align-items: center; border-bottom-right-radius: 120px">
+<img src="../assets/images/services/ilo.webp" alt="A smiling participant sharing a cup of tea with a support worker at home" width="1920" height="1080" fetchpriority="high" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%">
+<div aria-hidden="true" class="rs-hero-shade" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,40,45,0.45) 0%, rgba(0,40,45,0.15) 60%, rgba(0,40,45,0) 100%)"></div>
+<div class="r-pad" style="position: relative; width: 100%; max-width: 1440px; margin: 0 auto; padding: 72px 64px 88px; box-sizing: border-box; color: #ffffff">
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #cfe3e5"><a href="../index.html" style="color: #cfe3e5">Home</a><span aria-hidden="true" style="margin: 0 10px">/</span><a href="../services.html" style="color: #cfe3e5">Our Services</a><span aria-hidden="true" style="margin: 0 10px">/</span><span aria-current="page" style="color: #ffffff; font-weight: 600">Individualised Living Option</span></nav>
+<h1 id="service-heading" class="rs-h1" style="margin: 26px 0 0; max-width: 780px; font-size: 60px; line-height: 1.08; font-weight: 600; letter-spacing: -0.5px">Individualised Living <span style="font-family: 'Yellowtail', cursive; font-weight: 400; color: #14cac8">Option</span></h1>
+<p style="margin: 22px 0 0; max-width: 700px; font-size: 18px; line-height: 1.7; font-weight: 300; color: #e3eff0"><strong>Live how you choose, tailored to you.</strong> Individualised Living Options (ILO) is an NDIS support that empowers people with disability to choose their preferred living arrangements and design supports tailored to their needs.</p>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px">
+<a href="#quote" class="r-btn r-btn-accent" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 30px; border-radius: 28px; background: #14cac8; color: #00343a; font-size: 17px; font-weight: 600">Enquire Now<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="tel:1800862427" class="r-btn r-btn-ghost" style="display: inline-flex; align-items: center; height: 54px; padding: 0 30px; border-radius: 28px; border: 1.5px solid #ffffff; color: #ffffff; font-size: 17px; font-weight: 600; box-sizing: border-box">Call 1800 862 427</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="about-heading" style="background: #ffffff">
+<div class="r-pad r-2col" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center">
+<div>
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Our ILO Services</div>
+<h2 id="about-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">What is an Individualised Living Option?</h2>
+<p style="margin: 20px 0 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #3d4a4c">ILO focuses on the <strong>supports required to live independently</strong>. If you&#39;re looking for a personalised living arrangement, ILO could be a great fit for you.</p>
+<p style="margin: 14px 0 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #3d4a4c">At Bharosa, our ILO services involve collaborating with you, your family, and friends to explore and create tailored living solutions. This could include sharing a home with housemates, living with a host family, or having your own place with customised support to meet your needs.</p>
+</div>
+<img src="../assets/images/ilo/ilo-sunset.webp" alt="Silhouette of a person in a wheelchair and their dog on a hill watching the sunset" width="1400" height="789" loading="lazy" style="display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 28px 120px 28px 28px">
+</div>
+</section>
+<section aria-labelledby="helps-heading" style="background: #00565e; color: #ffffff">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box">
+<div style="text-align: center">
+<h2 id="helps-heading" class="r-h2" style="margin: 0; display: flex; align-items: flex-end; justify-content: center; gap: 12px; flex-wrap: wrap; font-size: 46px; line-height: 1.18; font-weight: 600; color: #ffffff">How Bharosa helps with <span style="font-family: 'Yellowtail', cursive; font-weight: 400; font-size: 1.25em; line-height: 1; color: #14cac8">ILO</span></h2>
+<p style="margin: 16px 0 0; font-size: 18px; line-height: 1.6; font-weight: 300; color: #d5e8ea">We help you determine the right supports for your needs and guide you through the steps to make your ideal living arrangement a reality.</p>
+</div>
+<ol class="r-3col" style="margin: 56px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<li style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.16); border-radius: 22px; padding: 32px"><span aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background: #14cac8; color: #00343a; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">01</span><h3 style="margin: 22px 0 0; font-size: 22px; font-weight: 600; color: #ffffff">Get to Know You</h3><p style="margin: 10px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #d5e8ea">We get to know you, your goals, and your vision for your new home.</p></li>
+<li style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.16); border-radius: 22px; padding: 32px"><span aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background: #14cac8; color: #00343a; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">02</span><h3 style="margin: 22px 0 0; font-size: 22px; font-weight: 600; color: #ffffff">Explore Your Options</h3><p style="margin: 10px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #d5e8ea">We work with you, your family, and your support team to explore all available options.</p></li>
+<li style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.16); border-radius: 22px; padding: 32px"><span aria-hidden="true" style="width: 56px; height: 56px; border-radius: 50%; background: #14cac8; color: #00343a; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">03</span><h3 style="margin: 22px 0 0; font-size: 22px; font-weight: 600; color: #ffffff">Decide Together</h3><p style="margin: 10px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #d5e8ea">We assist you in deciding where to live, who to live with, and what support you require.</p></li>
+</ol>
+<p style="margin: 40px 0 0; text-align: center; font-size: 18px; line-height: 1.6; font-weight: 500; color: #ffffff">Together, we&#39;ll create a personalised plan that brings your chosen living arrangement and support services together.</p>
+</div>
+</section>
+<section aria-labelledby="who-for-heading" style="background: #edf4f6">
+<div class="r-pad r-2col" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box; display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: center">
+<div>
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Benefits</div>
+<h2 id="who-for-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">Benefits of Individualised Living Options</h2>
+<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #3d4a4c">ILO gives you greater freedom by offering a wide range of living options tailored to your needs and preferences. Whether you prefer an apartment in the city with in-home support or a house in the suburbs with friends and shared supports, ILO allows you to create a living arrangement that works for you.</p>
+</div>
+<div>
+<p style="margin: 0 0 16px; font-size: 19px; font-weight: 600; color: #2f3b3d">With ILO, you can:</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
+<li style="display: flex; align-items: center; gap: 18px; background: #ffffff; border-radius: 18px; padding: 22px 26px"><span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></span><span style="font-size: 18px; line-height: 1.5; font-weight: 500; color: #2f3b3d">Choose where you live and who you share your home with.</span></li>
+<li style="display: flex; align-items: center; gap: 18px; background: #ffffff; border-radius: 18px; padding: 22px 26px"><span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></span><span style="font-size: 18px; line-height: 1.5; font-weight: 500; color: #2f3b3d">Live independently or with family and friends.</span></li>
+<li style="display: flex; align-items: center; gap: 18px; background: #ffffff; border-radius: 18px; padding: 22px 26px"><span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></span><span style="font-size: 18px; line-height: 1.5; font-weight: 500; color: #2f3b3d">Receive NDIS support, whether you rent, own a home, or have a mortgage.</span></li>
+<li style="display: flex; align-items: center; gap: 18px; background: #ffffff; border-radius: 18px; padding: 22px 26px"><span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></span><span style="font-size: 18px; line-height: 1.5; font-weight: 500; color: #2f3b3d">Experience more stable and consistent support.</span></li>
+<li style="display: flex; align-items: center; gap: 18px; background: #ffffff; border-radius: 18px; padding: 22px 26px"><span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"></path></svg></span><span style="font-size: 18px; line-height: 1.5; font-weight: 500; color: #2f3b3d">Access opportunities to build your skills and independence.</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="quote" aria-labelledby="quote-heading" style="background: #ffffff">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box">
+<div class="r-2col" style="display: grid; grid-template-columns: 5fr 7fr; border-radius: 28px; overflow: hidden; box-shadow: 0 18px 48px rgba(0,63,69,0.12)">
+<div style="background: #edf4f6; padding: 48px 44px; display: flex; flex-direction: column">
+<div style="font-family: 'Yellowtail', cursive; font-size: 40px; line-height: 1; color: #0a7f7d">Let&#39;s Chat</div>
+<h2 id="quote-heading" class="r-h2" style="margin: 14px 0 0; font-size: 40px; line-height: 1.18; font-weight: 600; color: #2f3b3d">Ready to start your journey?</h2>
+<p style="margin: 16px 0 0; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">If you or a loved one is exploring Individualised Living Options, contact our friendly team today. We&#39;re here to help you find a living arrangement and supports that work for you.</p>
+<ul style="margin: 22px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px; font-weight: 500; color: #2f3b3d">
+<li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m8 12 3 3 5-6"></path></svg>No Obligation</li>
+<li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m8 12 3 3 5-6"></path></svg>Flexible Plans</li>
+<li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m8 12 3 3 5-6"></path></svg>NDIS-Funded Options</li>
+</ul>
+<div style="margin-top: auto; padding-top: 36px; display: flex; flex-direction: column; gap: 12px; font-size: 16px; font-weight: 600">
+<a href="tel:1800862427" style="display: flex; align-items: center; gap: 12px; color: #00565e"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.3 17.6 18 15.3a1.2 1.2 0 0 0-1.4.3l-2.3 2.9A17.8 17.8 0 0 1 5.5 9.7l2.9-2.3a1.2 1.2 0 0 0 .3-1.4L6.4.7A1.2 1.2 0 0 0 5 0L.9 1A1.2 1.2 0 0 0 0 2.1 21.9 21.9 0 0 0 21.9 24a1.2 1.2 0 0 0 1.2-.9l.9-4.1a1.2 1.2 0 0 0-.7-1.4z"></path></svg></span>1800 862 427</a>
+<div style="display: flex; align-items: center; gap: 12px; color: #00565e"><span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="12" height="18" viewBox="0 0 14 24" fill="currentColor"><rect width="14" height="24" rx="2.5"></rect><rect x="5" y="20" width="4" height="1.5" rx=".75" fill="#00565e"></rect></svg></span><span><a href="tel:+61466325591" style="color: #00565e">+61 0466 325 591</a>, <a href="tel:+61730776392" style="color: #00565e">+61 0730 776 392</a></span></div>
+<a href="mailto:info@bharosa.com.au" style="display: flex; align-items: center; gap: 12px; color: #00565e"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="16" height="12" viewBox="0 0 24 18" fill="currentColor"><path d="M0 2.5A2.5 2.5 0 0 1 2.5 0h19A2.5 2.5 0 0 1 24 2.5v.6l-12 7.4L0 3.1v-.6zm0 3 11.5 7.1a1 1 0 0 0 1 0L24 5.5v10A2.5 2.5 0 0 1 21.5 18h-19A2.5 2.5 0 0 1 0 15.5v-10z"></path></svg></span>info@bharosa.com.au</a>
+</div>
+</div>
+<form aria-labelledby="form-heading" style="background: #ffffff; padding: 48px 48px 44px">
+<h3 id="form-heading" style="margin: 0; font-size: 24px; font-weight: 600; color: #2f3b3d">Fill out the form to get started</h3>
+<div class="rs-form-grid" style="margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #2f3b3d"><span>First Name <span style="font-weight: 400; color: #55676a">(required)</span></span><input name="first-name" type="text" required="" style="height: 50px; border: 1px solid #cfdcdf; border-radius: 12px; padding: 0 16px; background: #fbfdfd; font-family: inherit; font-size: 16px; color: #2f3b3d"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #2f3b3d">Last Name<input name="last-name" type="text" style="height: 50px; border: 1px solid #cfdcdf; border-radius: 12px; padding: 0 16px; background: #fbfdfd; font-family: inherit; font-size: 16px; color: #2f3b3d"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #2f3b3d"><span>Email Address <span style="font-weight: 400; color: #55676a">(required)</span></span><input name="email-address" type="email" required="" style="height: 50px; border: 1px solid #cfdcdf; border-radius: 12px; padding: 0 16px; background: #fbfdfd; font-family: inherit; font-size: 16px; color: #2f3b3d"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #2f3b3d"><span>Phone Number <span style="font-weight: 400; color: #55676a">(required)</span></span><input name="phone-number" type="tel" required="" style="height: 50px; border: 1px solid #cfdcdf; border-radius: 12px; padding: 0 16px; background: #fbfdfd; font-family: inherit; font-size: 16px; color: #2f3b3d"></label>
+<fieldset style="margin: 0; padding: 0; border: 0"><legend style="padding: 0; font-size: 14px; font-weight: 600; color: #2f3b3d">NDIS Participant? <span style="font-weight: 400; color: #55676a">(required)</span></legend><div style="margin-top: 10px; display: flex; gap: 10px"><label style="flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #cfdcdf; border-radius: 12px; font-size: 16px; color: #2f3b3d; cursor: pointer"><input required value="Yes" type="radio" name="rs-ndis" style="width: 18px; height: 18px; margin: 0; accent-color: #00565e">Yes</label><label style="flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #cfdcdf; border-radius: 12px; font-size: 16px; color: #2f3b3d; cursor: pointer"><input value="No" type="radio" name="rs-ndis" style="width: 18px; height: 18px; margin: 0; accent-color: #00565e">No</label></div></fieldset>
+<fieldset style="margin: 0; padding: 0; border: 0"><legend style="padding: 0; font-size: 14px; font-weight: 600; color: #2f3b3d">Preferred Contact Method</legend><div style="margin-top: 10px; display: flex; gap: 10px"><label style="flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #cfdcdf; border-radius: 12px; font-size: 16px; color: #2f3b3d; cursor: pointer"><input value="Phone" type="radio" name="rs-contact" style="width: 18px; height: 18px; margin: 0; accent-color: #00565e">Phone</label><label style="flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 1px solid #cfdcdf; border-radius: 12px; font-size: 16px; color: #2f3b3d; cursor: pointer"><input value="Email" type="radio" name="rs-contact" style="width: 18px; height: 18px; margin: 0; accent-color: #00565e">Email</label></div></fieldset>
+</div>
+<label style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: #2f3b3d"><span style="display: flex; justify-content: space-between"><span>Message</span><span style="font-weight: 400; color: #55676a">0 / 150</span></span><textarea name="message" maxlength="150" rows="4" style="border: 1px solid #cfdcdf; border-radius: 12px; padding: 14px 16px; background: #fbfdfd; font-family: inherit; font-size: 16px; color: #2f3b3d; resize: vertical"></textarea></label>
+<button type="submit" class="r-btn r-btn-brand" style="margin-top: 26px; display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 32px; border: 0; border-radius: 28px; background: #00565e; color: #ffffff; font-family: inherit; font-size: 17px; font-weight: 600; cursor: pointer">Send Message<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</form>
+</div>
+</div>
+</section>
+<section aria-labelledby="faq-heading" style="background: #edf4f6">
+<div class="r-pad r-2col" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Got Questions?</div>
+<h2 id="faq-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">FAQs</h2>
+<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #3d4a4c">Common questions about Individualised Living Options.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 12px 24px; box-sizing: border-box; cursor: pointer; font-size: 17px; font-weight: 600; color: #2f3b3d">What&#39;s the difference between Individualised Living Options and Supported Independent Living?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: #00565e; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary><div style="padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c"><p style="margin: 0">Both Individualised Living Options (ILO) and <a href="supported-independent-living.html" style="color: #00565e; font-weight: 600">Supported Independent Living (SIL)</a> aim to provide greater independence for people with disabilities, but they differ in the level and type of support provided.</p><ul style="margin: 10px 0 0; padding-left: 22px"><li><strong>SIL</strong> is generally suited for people who require higher levels of care and typically live in shared accommodation with ongoing support.</li><li><strong>ILO</strong> is more flexible and often better suited for those who need support on an occasional basis rather than full-time care.</li></ul><p style="margin: 10px 0 0">The right choice depends on your individual needs and circumstances. We&#39;re here to help you explore your options and find the best fit for you.</p></div></details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 12px 24px; box-sizing: border-box; cursor: pointer; font-size: 17px; font-weight: 600; color: #2f3b3d">Can ILO help with housing costs?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: #00565e; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary><div style="padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c"><p style="margin: 0">ILO funding <strong>does not</strong> cover rent or mortgage payments for NDIS participants. Instead, it focuses on providing the support needed to live independently.</p><p style="margin: 10px 0 0">While some participants may move into someone else&#39;s home through a <strong>host arrangement</strong>, ILO funding does not pay for rent. It only funds the support that the host provides.</p></div></details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px"><summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 12px 24px; box-sizing: border-box; cursor: pointer; font-size: 17px; font-weight: 600; color: #2f3b3d">Is Individualised Living Options (ILO) right for you?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: #00565e; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary><div style="padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c"><p style="margin: 0">ILO may be a great fit if:</p><ul style="margin: 10px 0 0; padding-left: 22px"><li>You&#39;re moving out of home for the first time.</li><li>Your current home is unsuitable, whether it&#39;s overcrowded, in need of repairs, unaffordable, or doesn&#39;t meet your needs.</li><li>You&#39;re happy with your home but want to explore other living options.</li><li>You&#39;re at risk due to your current living situation.</li><li>You&#39;re transitioning out of care, child protection, or a custodial setting.</li><li>You plan to change your living arrangements in the next few years.</li><li>You need support to create a home setup that works for you.</li></ul><p style="margin: 10px 0 0">Most people with ILO live with family, friends, or others who have NDIS plans. However, ILO is <strong>not</strong> the same as group homes, shared accommodation services, or placements. It also doesn&#39;t cover 1:1 rostered care, which is more commonly funded through Supported Independent Living (SIL).</p></div></details>
+</div>
+</div>
+</section>
+</main>
+<footer style="background: #edf4f6; padding-top: 0">
+<section aria-labelledby="refer-heading" class="r-refer-wrap" style="border-radius: 0 160px 0 0; color: #ffffff">
+<div class="r-pad r-refer" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<h2 id="refer-heading" class="r-h2" style="margin: 0; display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; font-size: 46px; line-height: 1.1; font-weight: 600; color: #ffffff">Refer a <span style="font-family: 'Yellowtail', cursive; font-weight: 400; font-size: 1.3em; line-height: 1; color: #14cac8">Participant</span></h2>
+<p style="margin: 22px 0 0; max-width: 760px; font-size: 17px; line-height: 1.65; font-weight: 300; color: #d5e8ea">Referring a participant is quick and easy. Just fill out the form, and our friendly team will reach out to discuss how we can provide the best support tailored to their NDIS needs.</p>
+<div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px">
+<a href="../referrals.html" class="r-btn r-btn-accent" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 30px; border-radius: 28px; background: #14cac8; color: #00343a; font-size: 17px; font-weight: 600">Refer a Participant<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="tel:1800862427" class="r-btn r-btn-ghost" style="display: inline-flex; align-items: center; height: 54px; padding: 0 28px; border-radius: 28px; border: 1.5px solid #ffffff; color: #ffffff; font-size: 17px; font-weight: 600; box-sizing: border-box">Call 1800 862 427</a>
+</div>
+</div>
+<img src="../assets/images/we-support-ndis.png" alt="We support the NDIS" style="width: 150px; height: 150px; display: block; justify-self: center; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2)">
+</div>
+</section>
+<div style="background: #edf5f7">
+<div class="r-pad r-foot" style="max-width: 1440px; margin: 0 auto; padding: 72px 64px 0; box-sizing: border-box; display: grid; grid-template-columns: 320px 1fr 290px; gap: 64px; color: #31474b">
+<div class="r-foot-brand">
+<a href="../index.html" aria-label="Bharosa Community Services home" style="display: inline-block"><img src="../assets/images/logo-footer.png" alt="Bharosa Community Services" style="width: 270px; height: auto; display: block"></a>
+<img src="../assets/images/flags-tsi-aboriginal.png" alt="Torres Strait Islander flag and Aboriginal flag" style="margin-top: 24px; width: 110px; height: auto; display: block">
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.75; font-weight: 300; color: #3d4a4c">Bharosa Community Services respect and honour the history of Aboriginals and Torres Strait Islanders. We acknowledge their stories, traditions, and living cultures because that is what shapes Australia into an inclusive and diversified land. We are committed to building a brighter future together.</p>
+</div>
+<nav aria-labelledby="foot-services">
+<h2 id="foot-services" style="margin: 0; font-size: 20px; font-weight: 600; color: #00565e">Assisted Services For</h2>
+<ul class="r-foot-svc" style="margin: 18px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; font-size: 15px; line-height: 1.45">
+<li><a href="../services/assist-personal-activities.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Assist Personal Activities</a></li>
+<li><a href="community-nursing.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Community Nursing Care</a></li>
+<li><a href="../services/social-community-access.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Social and Community Access</a></li>
+<li><a href="supported-independent-living.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Supported Independent Living (SIL)</a></li>
+<li><a href="../services/accessible-transport.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Accessible Transport Services</a></li>
+<li><a href="short-medium-term-accommodation.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Short &amp; Medium Term Accommodation</a></li>
+<li><a href="../services/hidpa.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">High Intensity Daily Personal Activities</a></li>
+<li><a href="individualised-living-option.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Individualised Living Option</a></li>
+<li><a href="../services/group-centre-activities.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Group / Centre Based Activities</a></li>
+<li><a href="support-coordination.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Support Coordination</a></li>
+<li><a href="../services/household-tasks.html" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Assistance in Household Tasks</a></li>
+</ul>
+</nav>
+<div>
+<h2 style="margin: 0; font-size: 20px; font-weight: 600; color: #00565e">Reach Us</h2>
+<ul style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5; color: #3d4a4c">
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" style="flex-shrink: 0; margin-top: 3px"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><span>PO Box 4214, Forest Lake, QLD 4078</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" style="flex-shrink: 0; margin-top: 3px"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><span>Suite 3, Level 2, 73 Murray Street, Hobart 7000 TAS</span></li>
+<li><a href="tel:1800862427" style="display: flex; gap: 12px; align-items: center; color: #3d4a4c"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>1800 862 427</a></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 3px"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg><span><a href="tel:+61466325591" style="color: #3d4a4c">+61 0466 325 591</a><br><a href="tel:+61730776392" style="color: #3d4a4c">+61 0730 776 392</a></span></li>
+<li><a href="mailto:info@bharosa.com.au" style="display: flex; gap: 12px; align-items: center; color: #3d4a4c"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="2" y="4" width="20" height="16" rx="2.5"></rect><path d="m3 6 9 7 9-7"></path></svg>info@bharosa.com.au</a></li>
+</ul>
+<div style="margin-top: 22px; display: flex; gap: 10px">
+<a target="_blank" rel="noopener" href="https://www.facebook.com/BharosaCommunityServices" aria-label="Facebook" class="r-btn r-btn-brand" style="width: 44px; height: 44px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="8" height="14" viewBox="0 0 10 18" fill="currentColor"><path d="M6.5 18v-8.2h2.7l.4-3.2H6.5v-2c0-.9.3-1.6 1.6-1.6H9.8V.1C9.5.1 8.5 0 7.4 0 5 0 3.3 1.5 3.3 4.2v2.4H.6v3.2h2.7V18z"></path></svg></a>
+<a target="_blank" rel="noopener" href="https://www.instagram.com/bharosacommunityservices/" aria-label="Instagram" class="r-btn r-btn-brand" style="width: 44px; height: 44px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="6"></rect><circle cx="12" cy="12" r="4.5"></circle></svg></a>
+<a target="_blank" rel="noopener" href="https://www.linkedin.com/company/bharosa-community-services/" aria-label="LinkedIn" class="r-btn r-btn-brand" style="width: 44px; height: 44px; border-radius: 50%; background: #00565e; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-7M11 13.5c0-2 1.3-3.5 3-3.5s3 1 3 3.5V17"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px 32px; box-sizing: border-box">
+<div style="margin-top: 56px; border-top: 1px solid #c9dadd; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 36px; font-size: 14px; color: #55676a">
+<span>© 2026 Bharosa Community Services Pty Ltd. ABN: 31 651 151 183</span>
+<span style="display: flex; gap: 24px"><a href="https://bharosa.com.au/privacy-policy/" style="color: #55676a">Privacy Policy</a></span>
+</div>
+</div>
+</div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

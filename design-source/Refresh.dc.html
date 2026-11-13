@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bharosa Home Refresh</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=Yellowtail&amp;display=swap">
+<style>
+body{margin:0;font-family:'Outfit',system-ui,sans-serif;color:#2f3b3d;background:#ffffff}
+a{color:#00565e;text-decoration:none}a:hover{color:#003f45}
+.r-lift{transition:transform .2s ease, box-shadow .2s ease}
+.r-lift:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(0,63,69,.12)}
+.r-svc:hover .r-svc-arrow{background:#00565e;color:#ffffff}
+.r-btn{transition:background-color .2s ease, color .2s ease}
+.r-btn-accent:hover{background:#3fd8d6 !important;color:#00343a !important}
+.r-btn-brand:hover{background:#003f45 !important;color:#ffffff !important}
+.r-btn-ghost:hover{background:#ffffff !important;color:#00565e !important}
+.r-nav-link:hover{color:#00565e !important}
+.r-faq summary{list-style:none}
+.r-faq summary::-webkit-details-marker{display:none}
+.r-faq[open] .r-faq-plus{transform:rotate(45deg);background:#00565e;color:#ffffff}
+.r-faq[open]{border-color:#9fd9da !important}
+@keyframes r-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.r-gal-track{animation:r-marquee 45s linear infinite}
+.r-gal:hover .r-gal-track,.r-gal:focus-within .r-gal-track{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.r-gal-track{animation:none}.r-gal{overflow-x:auto !important}.r-lift{transition:none}}
+@media (max-width: 1100px){
+.r-links{display:none !important}
+.r-burger{display:inline-flex !important}
+.r-pad{padding-left:40px !important;padding-right:40px !important}
+.r-hero{min-height:600px !important}
+.r-hero-h{font-size:50px !important}
+.r-trust{grid-template-columns:1fr 1fr !important}
+.r-2col{grid-template-columns:1fr !important;gap:56px !important}
+.r-3col{grid-template-columns:1fr !important}
+.r-news-card{flex-direction:row !important}
+.r-news-card img{width:300px !important;aspect-ratio:auto !important;height:auto !important;flex-shrink:0}
+.r-svc-grid{grid-template-columns:1fr 1fr !important}
+.r-h2{font-size:40px !important}
+.r-foot{grid-template-columns:1fr 1fr !important}
+.r-foot-brand{grid-column:1 / -1}
+.r-refer{padding:48px !important}
+}
+@media (max-width: 700px){
+.r-topbar{display:none !important}
+.r-pad{padding-left:20px !important;padding-right:20px !important}
+.r-hero{min-height:560px !important}
+.r-hero-h{font-size:38px !important}
+.r-hero-label{display:none !important}
+.r-trust{grid-template-columns:1fr !important;margin-top:-40px !important}
+.r-2col{gap:40px !important}
+.r-svc-grid{grid-template-columns:1fr !important}
+.r-values{grid-template-columns:1fr !important}
+.r-h2{font-size:32px !important}
+.r-news-card{flex-direction:column !important}
+.r-news-card img{width:100% !important;aspect-ratio:460 / 260 !important}
+.r-gal-tile{width:240px !important;height:190px !important}
+.r-tst-fig{padding:40px 22px 28px !important}
+.r-refer{grid-template-columns:1fr !important;padding:36px 24px !important;border-radius:24px 64px 24px 24px !important}
+.r-foot{grid-template-columns:1fr !important}
+.r-foot-svc{grid-template-columns:1fr !important}
+}
+@media (max-width: 700px){.sil-grid{grid-template-columns:1fr !important}}
+</style>
+</helmet>
+<header style="width: 100%; position: relative; z-index: 2">
+<div class="r-topbar" style="background: {{brand}}; color: #ffffff">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 44px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 28px">
+<a href="mailto:info@bharosa.com.au" style="display: flex; align-items: center; gap: 10px; color: #ffffff; font-weight: 500"><svg aria-hidden="true" width="15" height="12" viewBox="0 0 24 18" fill="currentColor"><path d="M0 2.5A2.5 2.5 0 0 1 2.5 0h19A2.5 2.5 0 0 1 24 2.5v.6l-12 7.4L0 3.1v-.6zm0 3 11.5 7.1a1 1 0 0 0 1 0L24 5.5v10A2.5 2.5 0 0 1 21.5 18h-19A2.5 2.5 0 0 1 0 15.5v-10z"></path></svg>info@bharosa.com.au</a>
+<a href="tel:1800862427" style="display: flex; align-items: center; gap: 10px; color: #ffffff; font-weight: 500"><svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.3 17.6 18 15.3a1.2 1.2 0 0 0-1.4.3l-2.3 2.9A17.8 17.8 0 0 1 5.5 9.7l2.9-2.3a1.2 1.2 0 0 0 .3-1.4L6.4.7A1.2 1.2 0 0 0 5 0L.9 1A1.2 1.2 0 0 0 0 2.1 21.9 21.9 0 0 0 21.9 24a1.2 1.2 0 0 0 1.2-.9l.9-4.1a1.2 1.2 0 0 0-.7-1.4z"></path></svg>1800 862 427</a>
+</div>
+<div style="display: flex; align-items: center; gap: 18px">
+<label style="display: flex; align-items: center; gap: 8px; color: #ffffff">
+<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2c3 3.5 3 16.5 0 20M12 2c-3 3.5-3 16.5 0 20"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Language</span>
+<select style="font-family: inherit; font-size: 14px; color: #ffffff; background: transparent; border: 0; height: 36px; padding: 0 4px; cursor: pointer">
+<option style="color: #2f3b3d">English</option>
+<option style="color: #2f3b3d">Nepali</option>
+<option style="color: #2f3b3d">Hindi</option>
+<option style="color: #2f3b3d">Punjabi</option>
+</select>
+</label>
+<span aria-hidden="true" style="width: 1px; height: 18px; background: rgba(255,255,255,0.35)"></span>
+<div style="display: flex; gap: 2px">
+<a href="#" aria-label="Facebook" style="width: 32px; height: 36px; display: flex; align-items: center; justify-content: center; color: #ffffff"><svg aria-hidden="true" width="8" height="14" viewBox="0 0 10 18" fill="currentColor"><path d="M6.5 18v-8.2h2.7l.4-3.2H6.5v-2c0-.9.3-1.6 1.6-1.6H9.8V.1C9.5.1 8.5 0 7.4 0 5 0 3.3 1.5 3.3 4.2v2.4H.6v3.2h2.7V18z"></path></svg></a>
+<a href="#" aria-label="Instagram" style="width: 32px; height: 36px; display: flex; align-items: center; justify-content: center; color: #ffffff"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="6"></rect><circle cx="12" cy="12" r="4.5"></circle></svg></a>
+<a href="#" aria-label="LinkedIn" style="width: 32px; height: 36px; display: flex; align-items: center; justify-content: center; color: #ffffff"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-7M11 13.5c0-2 1.3-3.5 3-3.5s3 1 3 3.5V17"></path></svg></a>
+</div>
+<a href="Contact-Refresh.dc.html" style="color: #ffffff; font-weight: 600">Contact Us</a>
+<span aria-hidden="true" style="width: 1px; height: 18px; background: rgba(255,255,255,0.35)"></span>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; color: #ffffff; font-weight: 600"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Staff Portal</a>
+</div>
+</div>
+</div>
+<nav aria-label="Main" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,63,69,0.08)">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 84px">
+<a href="#" aria-label="Bharosa Community Services, Registered NDIS Provider, home" style="display: flex; align-items: center"><img src="/_blob/f36c69770a243946b75e209626c26bd9" alt="Bharosa Community Services and I love NDIS Registered NDIS Provider logos" style="height: 56px; width: auto; display: block"></a>
+<div class="r-links" style="display: flex; align-items: center; gap: 40px; font-size: 17px; font-weight: 500">
+<a href="Refresh.dc.html" aria-current="page" style="color: {{brand}}; padding: 8px 0; border-bottom: 2px solid {{accent}}">Home</a>
+<a href="About-Refresh.dc.html" class="r-nav-link" style="color: #2f3b3d; padding: 8px 0">About Us</a>
+<a href="Services-Refresh.dc.html" class="r-nav-link" style="color: #2f3b3d; padding: 8px 0">Our Services</a>
+<a href="#" class="r-nav-link" style="color: #2f3b3d; padding: 8px 0">SIL Vacancy</a>
+<a href="#" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 26px; border-radius: 26px; background: {{brand}}; color: #ffffff; font-weight: 600">Referrals<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<button type="button" class="r-burger" aria-label="Open menu" style="display: none; align-items: center; justify-content: center; width: 48px; height: 48px; border: 0; border-radius: 12px; background: {{brand}}; color: #ffffff; cursor: pointer"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg></button>
+</div>
+</nav>
+</header>
+<main>
+<section aria-labelledby="hero-heading" class="r-hero" style="position: relative; min-height: 680px; background: #0d2f34; overflow: hidden; display: flex; align-items: center">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(45deg, rgba(255,255,255,0.035) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.035) 75%), linear-gradient(45deg, rgba(255,255,255,0.035) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.035) 75%); background-size: 48px 48px; background-position: 0 0, 24px 24px"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(0,40,45,0.55)"></div>
+<div class="r-pad" style="position: relative; width: 100%; max-width: 1440px; margin: 0 auto; padding: 96px 64px 140px; box-sizing: border-box; color: #ffffff">
+<div style="max-width: 720px; display: flex; flex-direction: column; align-items: flex-start">
+<p style="margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: {{accent}}">Registered NDIS Provider in Queensland &amp; Tasmania</p>
+<h1 id="hero-heading" class="r-hero-h" style="margin: 26px 0 0; font-size: 62px; line-height: 1.08; font-weight: 600; letter-spacing: -0.5px">Compassionate, reliable, and flexible <span style="font-family: 'Yellowtail', cursive; font-weight: 400; color: {{accent}}">care</span></h1>
+<p style="margin: 22px 0 0; max-width: 600px; font-size: 19px; line-height: 1.6; font-weight: 300; color: #e3eff0">We work closely with NDIS participants and their families to deliver tailored, high-quality disability support, from occasional routine care to 24-hour support packages.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 14px">
+<a href="#" class="r-btn r-btn-accent" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 30px; border-radius: 28px; background: {{accent}}; color: #00343a; font-size: 17px; font-weight: 600">Make a Referral<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#" class="r-btn r-btn-ghost" style="display: inline-flex; align-items: center; height: 54px; padding: 0 30px; border-radius: 28px; border: 1.5px solid #ffffff; color: #ffffff; font-size: 17px; font-weight: 600; box-sizing: border-box">Book a Free Consultation</a>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="r-hero-label" style="position: absolute; right: 32px; bottom: 120px; display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.7); font-size: 13px"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3.5v17l14-8.5z"></path></svg>[HERO VIDEO, 1920 × 1080, muted loop]</div>
+</section>
+<section aria-label="Why families choose Bharosa" class="r-pad" style="position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; padding: 0 64px; box-sizing: border-box">
+<div class="r-trust" style="margin-top: -72px; background: #ffffff; border-radius: 20px; box-shadow: 0 18px 48px rgba(0,63,69,0.12); display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px">
+<div style="display: flex; align-items: center; gap: 16px; padding: 24px 22px">
+<span aria-hidden="true" style="flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; background: #e1f9f9; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"></path><path d="m8.5 12 2.5 2.5 4.5-5"></path></svg></span>
+<div><div style="font-size: 17px; font-weight: 600; color: #2f3b3d">Registered Provider</div><div style="margin-top: 2px; font-size: 14px; color: #55676a">NDIS registered and Brisbane based</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 24px 22px">
+<span aria-hidden="true" style="flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; background: #e1f9f9; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>
+<div><div style="font-size: 17px; font-weight: 600; color: #2f3b3d">QLD &amp; Tasmania</div><div style="margin-top: 2px; font-size: 14px; color: #55676a">Brisbane, Logan, Ipswich and more</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 24px 22px">
+<span aria-hidden="true" style="flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; background: #e1f9f9; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c.6-3.6 3.2-6 6.5-6s5.9 2.4 6.5 6"></path><circle cx="17" cy="9" r="2.5"></circle><path d="M16.5 14c2.7.2 4.6 2.2 5 5"></path></svg></span>
+<div><div style="font-size: 17px; font-weight: 600; color: #2f3b3d">Ages 18 to 65</div><div style="margin-top: 2px; font-size: 14px; color: #55676a">Qualified, caring support workers</div></div>
+</div>
+<div style="display: flex; align-items: center; gap: 16px; padding: 24px 22px">
+<span aria-hidden="true" style="flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; background: #e1f9f9; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="17" rx="2"></rect><path d="M3 9.5h18M8 2.5v4M16 2.5v4M9 15l2 2 4-4"></path></svg></span>
+<div><div style="font-size: 17px; font-weight: 600; color: #2f3b3d">Free Consultation</div><div style="margin-top: 2px; font-size: 14px; color: #55676a">Advice matched to your NDIS plan</div></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="about-heading" style="background: #ffffff">
+<div class="r-pad r-2col" style="max-width: 1440px; margin: 0 auto; padding: 112px 64px 104px; box-sizing: border-box; display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center">
+<div style="position: relative; width: 100%; max-width: 540px; justify-self: center">
+<svg aria-hidden="true" viewBox="0 0 640 300" preserveAspectRatio="none" style="position: absolute; left: -12%; bottom: -9%; width: 108%; height: 52%; display: block"><path fill="{{accent}}" d="M60 40C20 60 0 120 10 170c15 60 70 80 190 90l220 10c60 30 140 40 170-10 20-40 10-100-30-140L200 20C140 5 90 20 60 40z"></path></svg>
+<img src="/_blob/1187e11611e5562c902c31312680f4aa" alt="A smiling man in a wheelchair looks at a phone with a support worker leaning over his shoulder" style="position: relative; display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 40px">
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">About Us</div>
+<h2 id="about-heading" class="r-h2" style="margin: 4px 0 6px; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d; letter-spacing: -0.3px">Your Trusted NDIS Provider in Brisbane &amp; Queensland</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; font-weight: 300; color: #3d4a4c">At Bharosa Community Services, we are a registered NDIS provider based in Brisbane, supporting participants across Queensland and Tasmania. We work closely with NDIS participants and their families to deliver tailored, high-quality disability support, whether that's occasional routine care, community access assistance, or a comprehensive 24-hour support package.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; font-weight: 300; color: #3d4a4c">Our qualified support workers bring professionalism, empathy, and genuine care to every interaction across:</p>
+<ul style="margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px">
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Brisbane</li>
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Toowoomba</li>
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Ipswich</li>
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Logan</li>
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Sunshine Coast</li>
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Caboolture</li>
+<li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">Regional Tasmania</li>
+</ul>
+<a href="#" class="r-btn r-btn-brand" style="margin-top: 18px; display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 30px; border-radius: 28px; background: {{brand}}; color: #ffffff; font-size: 17px; font-weight: 600">Learn more about Bharosa<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+<section aria-label="Getting started" style="background: #edf4f6">
+<div class="r-pad r-3col" style="max-width: 1440px; margin: 0 auto; padding: 80px 64px; box-sizing: border-box; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px">
+<a href="#" class="r-lift" style="display: flex; flex-direction: column; align-items: flex-start; background: #ffffff; border-radius: 20px; padding: 32px; color: #2f3b3d">
+<span aria-hidden="true" style="font-size: 14px; font-weight: 600; color: #0a7f7d; letter-spacing: 1px">STEP 01</span>
+<h3 style="margin: 12px 0 0; font-size: 24px; font-weight: 600; color: {{brand}}">How to Get Started</h3>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #3d4a4c">New to NDIS or unsure where to begin? Getting started with our Brisbane, Queensland NDIS support services is simple and stress-free. Follow three easy steps: Connect, Create, and Receive Support.</p>
+<span style="margin-top: auto; padding-top: 22px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: {{brand}}">Learn more<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a href="#" class="r-lift" style="display: flex; flex-direction: column; align-items: flex-start; background: {{brand}}; border-radius: 20px; padding: 32px; color: #ffffff">
+<span aria-hidden="true" style="font-size: 14px; font-weight: 600; color: {{accent}}; letter-spacing: 1px">STEP 02</span>
+<h3 style="margin: 12px 0 0; font-size: 24px; font-weight: 600; color: #ffffff">Book a Consultation</h3>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #dcecee">Not sure which NDIS services are right for you? Our Brisbane-based team is here to help. Book a free consultation to discuss your needs and get personalised recommendations matched to your NDIS plan and goals.</p>
+<span style="margin-top: auto; padding-top: 22px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: {{accent}}">Book now<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+<a href="#" class="r-lift" style="display: flex; flex-direction: column; align-items: flex-start; background: #ffffff; border-radius: 20px; padding: 32px; color: #2f3b3d">
+<span aria-hidden="true" style="font-size: 14px; font-weight: 600; color: #0a7f7d; letter-spacing: 1px">STEP 03</span>
+<h3 style="margin: 12px 0 0; font-size: 24px; font-weight: 600; color: {{brand}}">NDIS Funding Explained</h3>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #3d4a4c">NDIS funding can be complex, but we're here to simplify it. We'll explain how funding works, help you understand your plan, and ensure you make the most of your supports.</p>
+<span style="margin-top: auto; padding-top: 22px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: {{brand}}">Learn more<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</a>
+</div>
+</section>
+<section aria-labelledby="services-heading" style="background: #ffffff">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box">
+<div class="r-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end">
+<div>
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Our Services</div>
+<h2 id="services-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">Support for every part of daily life</h2>
+</div>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; font-weight: 300; color: #3d4a4c">We offer a comprehensive range of NDIS support services to participants in Brisbane, Queensland, and Tasmania.</p>
+</div>
+<div class="r-svc-grid" style="margin-top: 56px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px">
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/a4d5a5cc91a09eaa08ab9ba8d779cc4e" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Assist Personal Activities</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/ab92dbc41ff530320a818c5371217505" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Assistance with Social and Community Access</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/a35932974d4bf6c963d3a28864482354" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Accessible Transport Services</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/97753a7b2e1b13ce3970feaf144f2742" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">High Intensity Daily Personal Activities (HIDPA)</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/82b614df87f1db6a9de5560712709905" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Group / Centre Based Activities</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/d00e54121db38d25af9b984d68384888" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Assistance in Household Tasks</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/0ffe5b70cefb4c6a7875fdc620462842" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Community Nursing Care</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/aabaabcc812c19c06d7800e474d72e8c" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Supported Independent Living (SIL)</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/0a8e46c4ceb519814d70eadbb8162ee0" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Short &amp; Medium Term Accommodation</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/8373594102e3dd71650597832e7b9bc2" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Individualised Living Option</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<a href="#" class="r-lift r-svc" style="display: flex; align-items: center; gap: 18px; padding: 20px 20px 20px 18px; border: 1px solid #dbe7ea; border-radius: 18px; background: #ffffff; color: #2f3b3d"><img src="/_blob/e63f8708e4ca0ceaee4c19fc5d36ad2d" alt="" style="width: 64px; height: 64px; display: block; flex-shrink: 0"><span style="flex: 1; font-size: 18px; line-height: 1.35; font-weight: 600; color: {{brand}}">Support Coordination</span><span class="r-svc-arrow" aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; padding: 22px 24px; border-radius: 18px; background: #e1f9f9">
+<span style="font-size: 18px; font-weight: 600; color: #2f3b3d">Not sure which service fits?</span>
+<a href="#" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; height: 44px; padding: 0 22px; border-radius: 24px; background: {{brand}}; color: #ffffff; font-size: 15px; font-weight: 600">Book a free consultation</a>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="sil-heading" style="background: #edf4f6">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<div style="max-width: 720px">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Now Available</div>
+<h2 id="sil-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">SIL Vacancies</h2>
+<p style="margin: 14px 0 0; font-size: 18px; line-height: 1.6; font-weight: 300; color: #3d4a4c">Supported Independent Living homes with rooms available now in Queensland and Tasmania.</p>
+</div>
+<a href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 17px; font-weight: 600; color: {{brand}}">View all SIL vacancies<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="sil-grid" style="margin-top: 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<article class="r-lift" style="background: #ffffff; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+<div role="img" aria-label="Photo of the Morayfield SIL home" style="position: relative; aspect-ratio: 16 / 9; background: #cfe0e4; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500">[PROPERTY PHOTO: Morayfield]<span style="position: absolute; top: 18px; left: 18px; padding: 7px 14px; border-radius: 18px; background: {{brand}}; color: #ffffff; font-size: 13px; font-weight: 600; letter-spacing: 0.5px">Vacancy available</span></div>
+<div style="padding: 28px 30px 30px; display: flex; flex-direction: column; flex: 1">
+<p style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #0a7f7d"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 24 28" fill="#0a7f7d"><path d="M12 0A11 11 0 0 0 1 11c0 8.3 11 17 11 17s11-8.7 11-17A11 11 0 0 0 12 0zm0 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"></path></svg>Morayfield, QLD</p>
+<h3 style="margin: 8px 0 0; font-size: 28px; line-height: 1.2; font-weight: 600; color: #2f3b3d">SIL Vacancy in Morayfield</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #3d4a4c">[SHORT DESCRIPTION OF THE HOME AND SUPPORT]</p>
+<ul style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px"><li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">[BEDROOMS]</li><li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">[BATHROOMS]</li><li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">[KEY FEATURE]</li></ul>
+<p style="margin: 20px 0 0; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; background: #e1f9f9; font-size: 15px; font-weight: 500; color: #2f3b3d"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00565e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16.5v.01"></path></svg>NDIS SIL funding required</p>
+<div style="margin-top: auto; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 10px">
+<a href="#" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 26px; border-radius: 26px; background: {{brand}}; color: #ffffff; font-size: 16px; font-weight: 600">View Vacancy<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#" class="r-btn r-btn-ghost" style="display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: 26px; border: 1.5px solid {{brand}}; color: {{brand}}; font-size: 16px; font-weight: 600; box-sizing: border-box">Enquire Now</a>
+</div>
+</div>
+</article>
+<article class="r-lift" style="background: #ffffff; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+<div role="img" aria-label="Photo of the Moonah SIL home" style="position: relative; aspect-ratio: 16 / 9; background: #cfe0e4; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500">[PROPERTY PHOTO: Moonah]<span style="position: absolute; top: 18px; left: 18px; padding: 7px 14px; border-radius: 18px; background: {{brand}}; color: #ffffff; font-size: 13px; font-weight: 600; letter-spacing: 0.5px">Vacancy available</span></div>
+<div style="padding: 28px 30px 30px; display: flex; flex-direction: column; flex: 1">
+<p style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: #0a7f7d"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 24 28" fill="#0a7f7d"><path d="M12 0A11 11 0 0 0 1 11c0 8.3 11 17 11 17s11-8.7 11-17A11 11 0 0 0 12 0zm0 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"></path></svg>Moonah, Hobart TAS</p>
+<h3 style="margin: 8px 0 0; font-size: 28px; line-height: 1.2; font-weight: 600; color: #2f3b3d">SIL Vacancy in Moonah</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.65; font-weight: 300; color: #3d4a4c">[SHORT DESCRIPTION OF THE HOME AND SUPPORT]</p>
+<ul style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px"><li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">[BEDROOMS]</li><li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">[BATHROOMS]</li><li style="padding: 7px 14px; border-radius: 18px; background: #edf4f6; font-size: 14px; font-weight: 500; color: {{brand}}">[KEY FEATURE]</li></ul>
+<p style="margin: 20px 0 0; display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; background: #e1f9f9; font-size: 15px; font-weight: 500; color: #2f3b3d"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00565e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v5M12 16.5v.01"></path></svg>NDIS SIL funding required</p>
+<div style="margin-top: auto; padding-top: 24px; display: flex; flex-wrap: wrap; gap: 10px">
+<a href="#" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 26px; border-radius: 26px; background: {{brand}}; color: #ffffff; font-size: 16px; font-weight: 600">View Vacancy<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#" class="r-btn r-btn-ghost" style="display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: 26px; border: 1.5px solid {{brand}}; color: {{brand}}; font-size: 16px; font-weight: 600; box-sizing: border-box">Enquire Now</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="why-heading" style="background: {{brand}}; color: #ffffff">
+<div class="r-pad r-2col" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box; display: grid; grid-template-columns: 5fr 6fr; gap: 80px; align-items: center">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<h2 id="why-heading" class="r-h2" style="margin: 0; font-size: 50px; line-height: 1.1; font-weight: 600; color: #ffffff; display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap">Why Choose <span style="font-family: 'Yellowtail', cursive; font-weight: 400; font-size: 1.25em; line-height: 1; color: {{accent}}">Us?</span></h2>
+<p style="margin: 28px 0 0; font-size: 21px; line-height: 1.45; font-weight: 500; color: #ffffff">Bharosa Community Services is a leading disability support team, dedicated to empowering people through compassionate, reliable, and flexible care.</p>
+<p style="margin: 18px 0 0; font-size: 16px; line-height: 1.7; font-weight: 300; color: #d5e8ea">We believe in building inclusive communities and helping every participant reach their personal goals. Our team recognises that no two people are the same, and we take pride in designing supports that reflect your individual needs, lifestyle, and aspirations.</p>
+<a href="#" class="r-btn r-btn-accent" style="margin-top: 32px; display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 28px; border-radius: 28px; background: {{accent}}; color: #00343a; font-size: 17px; font-weight: 600">Learn More About Bharosa<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="r-values" style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px">
+<div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 18px; padding: 26px">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 14px; background: {{accent}}; color: #00343a; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.4 12 20 12 20z"></path></svg></span>
+<h3 style="margin: 18px 0 0; font-size: 21px; font-weight: 600">Compassionate</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #d5e8ea">Empathy and genuine care in every interaction.</p>
+</div>
+<div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 18px; padding: 26px">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 14px; background: {{accent}}; color: #00343a; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5z"></path><path d="m8.5 12 2.5 2.5 4.5-5"></path></svg></span>
+<h3 style="margin: 18px 0 0; font-size: 21px; font-weight: 600">Reliable</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #d5e8ea">Qualified support workers you can count on.</p>
+</div>
+<div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 18px; padding: 26px">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 14px; background: {{accent}}; color: #00343a; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h11M4 17h7M15 4v6M11 14v6M15 7h5M11 17h9"></path></svg></span>
+<h3 style="margin: 18px 0 0; font-size: 21px; font-weight: 600">Flexible</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #d5e8ea">From occasional routine care to 24-hour support.</p>
+</div>
+<div style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: 18px; padding: 26px">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 14px; background: {{accent}}; color: #00343a; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c.8-4 4-6.5 8-6.5s7.2 2.5 8 6.5"></path></svg></span>
+<h3 style="margin: 18px 0 0; font-size: 21px; font-weight: 600">Personalised</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #d5e8ea">Supports designed around your needs and goals.</p>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="testimonials-heading" style="background: #ffffff">
+<div class="r-pad" style="max-width: 1100px; margin: 0 auto; padding: 104px 64px 96px; box-sizing: border-box; text-align: center">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">From Our Team</div>
+<h2 id="testimonials-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">Employee Testimonials</h2>
+<p style="margin: 14px 0 0; font-size: 18px; line-height: 1.5; font-weight: 300; color: #3d4a4c">Hear from our passionate team members about what makes working at Bharosa Community Services so special.</p>
+<figure class="r-tst-fig" style="position: relative; margin: 48px 0 0; padding: 48px 56px 40px; border-radius: 24px; background: #edf4f6; text-align: left">
+<svg aria-hidden="true" width="56" height="44" viewBox="0 0 56 44" fill="{{accent}}" style="position: absolute; top: -22px; left: 48px"><path d="M0 44V26C0 11 7 2 21 0l2 7c-7 2-11 7-11 14h10v23zm33 0V26C33 11 40 2 54 0l2 7c-7 2-11 7-11 14h10v23z"></path></svg>
+<blockquote style="margin: 0; font-size: 19px; line-height: 1.7; font-weight: 300; color: #2f3b3d">I've been working as a casual support worker at Bharosa for the past 2 to 3 months. I chose this role because I enjoy helping others and making a positive difference in their lives. My work involves assisting residents with daily tasks, supporting community access, and ensuring clients feel safe and valued. This experience has made me more patient, compassionate, and empathetic, while improving my communication and teamwork skills.</blockquote>
+<figcaption style="margin-top: 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap">
+<div style="display: flex; align-items: center; gap: 16px">
+<img src="/_blob/d9e152df27fbeb30cb1d77a7a3a8844c" alt="Oshin Joshi" style="width: 64px; height: 64px; border-radius: 50%; display: block; border: 3px solid #ffffff">
+<div><div style="font-size: 19px; font-weight: 600; color: #2f3b3d">Oshin Joshi</div><div style="font-size: 15px; font-weight: 500; color: #0a7f7d">Support Worker</div></div>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" aria-label="Previous testimonial" class="r-btn r-btn-ghost" style="width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid {{brand}}; background: transparent; color: {{brand}}; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button>
+<button type="button" aria-label="Next testimonial" class="r-btn r-btn-brand" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: {{brand}}; color: #ffffff; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</div>
+</figcaption>
+</figure>
+</div>
+</section>
+<section aria-labelledby="news-heading" style="background: #edf4f6">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<div style="max-width: 760px">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">News and Updates</div>
+<h2 id="news-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">What's Trending in NDIS?</h2>
+<p style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; font-weight: 300; color: #3d4a4c">Stay informed with the latest disability support news, NDIS updates, and community stories from our team in Brisbane and Queensland.</p>
+</div>
+<a href="#" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 26px; border-radius: 26px; background: {{brand}}; color: #ffffff; font-size: 16px; font-weight: 600">View all articles<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="r-3col" style="margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px">
+<a href="#" class="r-lift r-news-card" style="display: flex; flex-direction: column; background: #ffffff; border-radius: 20px; overflow: hidden; color: #2f3b3d">
+<img src="/_blob/ccac88c3c4883320822dc8420310355c" alt="" style="display: block; width: 100%; aspect-ratio: 460 / 260; object-fit: cover">
+<div style="padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1">
+<span style="align-self: flex-start; padding: 5px 12px; border-radius: 14px; background: #e1f9f9; font-size: 13px; font-weight: 600; color: {{brand}}">Community</span>
+<h3 style="margin: 14px 0 0; font-size: 21px; line-height: 1.35; font-weight: 600; color: #2f3b3d">Building Social Connections: A Guide for NDIS Participants in Brisbane</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #3d4a4c">Did you know? Social isolation can have a profound impact on well-being, but with the right support...</p>
+<span style="margin-top: auto; padding-top: 18px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: {{brand}}">Read article<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+<a href="#" class="r-lift r-news-card" style="display: flex; flex-direction: column; background: #ffffff; border-radius: 20px; overflow: hidden; color: #2f3b3d">
+<img src="/_blob/54319a64279440042562c61d655ed66f" alt="" style="display: block; width: 100%; aspect-ratio: 460 / 260; object-fit: cover">
+<div style="padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1">
+<span style="align-self: flex-start; padding: 5px 12px; border-radius: 14px; background: #e1f9f9; font-size: 13px; font-weight: 600; color: {{brand}}">NDIS Plans</span>
+<h3 style="margin: 14px 0 0; font-size: 21px; line-height: 1.35; font-weight: 600; color: #2f3b3d">Self-Managed vs Plan-Managed NDIS: Which Is Right?</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #3d4a4c">One of the first decisions in your NDIS journey is also one of the most consequential...</p>
+<span style="margin-top: auto; padding-top: 18px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: {{brand}}">Read article<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+<a href="#" class="r-lift r-news-card" style="display: flex; flex-direction: column; background: #ffffff; border-radius: 20px; overflow: hidden; color: #2f3b3d">
+<img src="/_blob/e284543f601293c1edf2afaf5fcdb0a6" alt="" style="display: block; width: 100%; aspect-ratio: 460 / 260; object-fit: cover">
+<div style="padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1">
+<span style="align-self: flex-start; padding: 5px 12px; border-radius: 14px; background: #e1f9f9; font-size: 13px; font-weight: 600; color: {{brand}}">Funding</span>
+<h3 style="margin: 14px 0 0; font-size: 21px; line-height: 1.35; font-weight: 600; color: #2f3b3d">What Are NDIS Core Supports? A Complete Guide</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #3d4a4c">Most NDIS participants use their core supports budget every single week. It is usually...</p>
+<span style="margin-top: auto; padding-top: 18px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: {{brand}}">Read article<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section aria-labelledby="gallery-heading" style="background: #ffffff; padding: 104px 0 96px">
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px; box-sizing: border-box; text-align: center">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Moments That Matter</div>
+<h2 id="gallery-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">Our Gallery</h2>
+</div>
+<div class="r-gal" style="margin-top: 48px; width: 100%; overflow: hidden">
+<div class="r-gal-track" style="display: flex; align-items: center; gap: 20px; width: max-content; padding: 0 10px">
+<figure class="r-gal-tile" style="margin: 0; flex-shrink: 0; width: 380px; height: 300px; border-radius: 24px; background: #dfeaed; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 1</figcaption></figure>
+<figure class="r-gal-tile" style="margin: 0; flex-shrink: 0; width: 280px; height: 240px; border-radius: 24px; background: #cfe0e4; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 2</figcaption></figure>
+<figure class="r-gal-tile" style="margin: 0; flex-shrink: 0; width: 380px; height: 300px; border-radius: 24px; background: #e1f9f9; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 3</figcaption></figure>
+<figure class="r-gal-tile" style="margin: 0; flex-shrink: 0; width: 280px; height: 240px; border-radius: 24px; background: #dfeaed; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 4</figcaption></figure>
+<figure class="r-gal-tile" style="margin: 0; flex-shrink: 0; width: 380px; height: 300px; border-radius: 24px; background: #cfe0e4; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 5</figcaption></figure>
+<figure class="r-gal-tile" style="margin: 0; flex-shrink: 0; width: 280px; height: 240px; border-radius: 24px; background: #e1f9f9; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 6</figcaption></figure>
+<figure class="r-gal-tile" aria-hidden="true" style="margin: 0; flex-shrink: 0; width: 380px; height: 300px; border-radius: 24px; background: #dfeaed; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 1</figcaption></figure>
+<figure class="r-gal-tile" aria-hidden="true" style="margin: 0; flex-shrink: 0; width: 280px; height: 240px; border-radius: 24px; background: #cfe0e4; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 2</figcaption></figure>
+<figure class="r-gal-tile" aria-hidden="true" style="margin: 0; flex-shrink: 0; width: 380px; height: 300px; border-radius: 24px; background: #e1f9f9; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 3</figcaption></figure>
+<figure class="r-gal-tile" aria-hidden="true" style="margin: 0; flex-shrink: 0; width: 280px; height: 240px; border-radius: 24px; background: #dfeaed; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 4</figcaption></figure>
+<figure class="r-gal-tile" aria-hidden="true" style="margin: 0; flex-shrink: 0; width: 380px; height: 300px; border-radius: 24px; background: #cfe0e4; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 5</figcaption></figure>
+<figure class="r-gal-tile" aria-hidden="true" style="margin: 0; flex-shrink: 0; width: 280px; height: 240px; border-radius: 24px; background: #e1f9f9; display: flex; align-items: center; justify-content: center; color: {{brand}}; font-size: 15px; font-weight: 500"><figcaption>Gallery photo 6</figcaption></figure>
+</div>
+</div>
+</section>
+<section aria-labelledby="faq-heading" style="background: #edf4f6">
+<div class="r-pad r-2col" style="max-width: 1440px; margin: 0 auto; padding: 104px 64px; box-sizing: border-box; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<div style="font-family: 'Yellowtail', cursive; font-size: 42px; line-height: 1; color: #0a7f7d">Got Questions?</div>
+<h2 id="faq-heading" class="r-h2" style="margin: 14px 0 0; font-size: 46px; line-height: 1.18; font-weight: 600; color: #2f3b3d">Frequently Asked Questions</h2>
+<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #3d4a4c">Find quick answers about our NDIS services, who we support, and how to get started.</p>
+<div style="margin-top: 32px; width: 100%; max-width: 420px; box-sizing: border-box; background: #ffffff; border-radius: 20px; padding: 26px">
+<div style="font-size: 18px; font-weight: 600; color: #2f3b3d">Still have a question?</div>
+<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; font-weight: 300; color: #3d4a4c">Our team is happy to help.</p>
+<div style="margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px">
+<a href="#" class="r-btn r-btn-brand" style="display: inline-flex; align-items: center; height: 46px; padding: 0 22px; border-radius: 24px; background: {{brand}}; color: #ffffff; font-size: 15px; font-weight: 600">Contact Us</a>
+<a href="tel:1800862427" style="display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 6px; font-size: 16px; font-weight: 600; color: {{brand}}"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.3 17.6 18 15.3a1.2 1.2 0 0 0-1.4.3l-2.3 2.9A17.8 17.8 0 0 1 5.5 9.7l2.9-2.3a1.2 1.2 0 0 0 .3-1.4L6.4.7A1.2 1.2 0 0 0 5 0L.9 1A1.2 1.2 0 0 0 0 2.1 21.9 21.9 0 0 0 21.9 24a1.2 1.2 0 0 0 1.2-.9l.9-4.1a1.2 1.2 0 0 0-.7-1.4z"></path></svg>1800 862 427</a>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<details class="r-faq" open="" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; padding: 14px 24px; box-sizing: border-box; cursor: pointer; font-size: 18px; font-weight: 600; color: #2f3b3d">Are you a registered NDIS provider?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">Yes. Bharosa Community Services is a registered NDIS provider based in Brisbane, supporting participants across Queensland and Tasmania.</p>
+</details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; padding: 14px 24px; box-sizing: border-box; cursor: pointer; font-size: 18px; font-weight: 600; color: #2f3b3d">Which areas do you support?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">We support participants in Brisbane, Toowoomba, Ipswich, Logan, Sunshine Coast, Caboolture, and regional Tasmania.</p>
+</details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; padding: 14px 24px; box-sizing: border-box; cursor: pointer; font-size: 18px; font-weight: 600; color: #2f3b3d">Who can access your services?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">Our support workers assist NDIS participants aged 18 to 65. [CONFIRM ANY OTHER ELIGIBILITY DETAILS]</p>
+</details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; padding: 14px 24px; box-sizing: border-box; cursor: pointer; font-size: 18px; font-weight: 600; color: #2f3b3d">How do I get started?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">Getting started takes three easy steps: Connect, Create, and Receive Support. You can also book a free consultation to talk about your needs and get recommendations matched to your NDIS plan and goals.</p>
+</details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; padding: 14px 24px; box-sizing: border-box; cursor: pointer; font-size: 18px; font-weight: 600; color: #2f3b3d">Can you help me understand my NDIS funding?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">Yes. We'll explain how funding works, help you understand your plan, and make sure you get the most from your supports.</p>
+</details>
+<details class="r-faq" style="background: #ffffff; border: 1px solid #ffffff; border-radius: 16px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 68px; padding: 14px 24px; box-sizing: border-box; cursor: pointer; font-size: 18px; font-weight: 600; color: #2f3b3d">How do I make a referral?<span class="r-faq-plus" aria-hidden="true" style="flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: #edf4f6; color: {{brand}}; display: flex; align-items: center; justify-content: center; transition: transform .2s ease"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 1v10M1 6h10"></path></svg></span></summary>
+<p style="margin: 0; padding: 0 24px 22px; font-size: 16px; line-height: 1.7; font-weight: 300; color: #3d4a4c">[REFERRAL PROCESS: for example, use the Referrals page, email info@bharosa.com.au, or call 1800 862 427]</p>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer style="background: #ffffff; padding-top: 0">
+<section aria-labelledby="refer-heading" class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 96px 64px; box-sizing: border-box">
+<div class="r-refer r-refer-wrap" style="background: {{brand}}; border-radius: 32px 160px 32px 32px; padding: 64px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; color: #ffffff">
+<div style="display: flex; flex-direction: column; align-items: flex-start">
+<h2 id="refer-heading" class="r-h2" style="margin: 0; display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; font-size: 46px; line-height: 1.1; font-weight: 600; color: #ffffff">Refer a <span style="font-family: 'Yellowtail', cursive; font-weight: 400; font-size: 1.3em; line-height: 1; color: {{accent}}">Participant</span></h2>
+<p style="margin: 22px 0 0; max-width: 760px; font-size: 17px; line-height: 1.65; font-weight: 300; color: #d5e8ea">Referring a participant is quick and easy. Just fill out the form, and our friendly team will reach out to discuss how we can provide the best support tailored to their NDIS needs.</p>
+<div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px">
+<a href="#" class="r-btn r-btn-accent" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 30px; border-radius: 28px; background: {{accent}}; color: #00343a; font-size: 17px; font-weight: 600">Refer a Participant<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="tel:1800862427" class="r-btn r-btn-ghost" style="display: inline-flex; align-items: center; height: 54px; padding: 0 28px; border-radius: 28px; border: 1.5px solid #ffffff; color: #ffffff; font-size: 17px; font-weight: 600; box-sizing: border-box">Call 1800 862 427</a>
+</div>
+</div>
+<img src="/_blob/d9f69fb163114b4713e6754602c1fdb3" alt="We support the NDIS" style="width: 150px; height: 150px; display: block; justify-self: center; border-radius: 50%; border: 4px solid rgba(255,255,255,0.2)">
+</div>
+</section>
+<div style="background: #edf5f7">
+<div class="r-pad r-foot" style="max-width: 1440px; margin: 0 auto; padding: 72px 64px 0; box-sizing: border-box; display: grid; grid-template-columns: 320px 1fr 290px; gap: 64px; color: #31474b">
+<div class="r-foot-brand">
+<a href="#" aria-label="Bharosa Community Services home" style="display: inline-block"><img src="/_blob/041701d98de22c10deb0e772c686bf87" alt="Bharosa Community Services" style="width: 270px; height: auto; display: block"></a>
+<img src="/_blob/b925e64160c47525c5b6618b787e3575" alt="Torres Strait Islander flag and Aboriginal flag" style="margin-top: 24px; width: 110px; height: auto; display: block">
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.75; font-weight: 300; color: #3d4a4c">Bharosa Community Services respect and honour the history of Aboriginals and Torres Strait Islanders. We acknowledge their stories, traditions, and living cultures because that is what shapes Australia into an inclusive and diversified land. We are committed to building a brighter future together.</p>
+</div>
+<nav aria-labelledby="foot-services">
+<h2 id="foot-services" style="margin: 0; font-size: 20px; font-weight: 600; color: {{brand}}">Assisted Services For</h2>
+<ul class="r-foot-svc" style="margin: 18px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; font-size: 15px; line-height: 1.45">
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Assist Personal Activities</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Community Nursing Care</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Social and Community Access</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Supported Independent Living (SIL)</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Accessible Transport Services</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Short &amp; Medium Term Accommodation</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">High Intensity Daily Personal Activities</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Individualised Living Option</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Group / Centre Based Activities</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Support Coordination</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Assistance in Household Tasks</a></li>
+<li><a href="#" class="r-nav-link" style="display: block; padding: 7px 0; color: #3d4a4c">Daily Life Skill Development Support</a></li>
+</ul>
+</nav>
+<div>
+<h2 style="margin: 0; font-size: 20px; font-weight: 600; color: {{brand}}">Reach Us</h2>
+<ul style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5; color: #3d4a4c">
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" style="flex-shrink: 0; margin-top: 3px"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><span>PO Box 4214, Forest Lake, QLD 4078</span></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" style="flex-shrink: 0; margin-top: 3px"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg><span>Suite 3, Level 2, 73 Murray Street, Hobart 7000 TAS</span></li>
+<li><a href="tel:1800862427" style="display: flex; gap: 12px; align-items: center; color: #3d4a4c"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>1800 862 427</a></li>
+<li style="display: flex; gap: 12px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" stroke-linecap="round" style="flex-shrink: 0; margin-top: 3px"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg><span><a href="tel:+61466325591" style="color: #3d4a4c">+61 0466 325 591</a><br><a href="tel:+61730776392" style="color: #3d4a4c">+61 0730 776 392</a></span></li>
+<li><a href="mailto:info@bharosa.com.au" style="display: flex; gap: 12px; align-items: center; color: #3d4a4c"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0a7f7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><rect x="2" y="4" width="20" height="16" rx="2.5"></rect><path d="m3 6 9 7 9-7"></path></svg>info@bharosa.com.au</a></li>
+</ul>
+<div style="margin-top: 22px; display: flex; gap: 10px">
+<a href="#" aria-label="Facebook" class="r-btn r-btn-brand" style="width: 44px; height: 44px; border-radius: 50%; background: {{brand}}; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="8" height="14" viewBox="0 0 10 18" fill="currentColor"><path d="M6.5 18v-8.2h2.7l.4-3.2H6.5v-2c0-.9.3-1.6 1.6-1.6H9.8V.1C9.5.1 8.5 0 7.4 0 5 0 3.3 1.5 3.3 4.2v2.4H.6v3.2h2.7V18z"></path></svg></a>
+<a href="#" aria-label="Instagram" class="r-btn r-btn-brand" style="width: 44px; height: 44px; border-radius: 50%; background: {{brand}}; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="6"></rect><circle cx="12" cy="12" r="4.5"></circle></svg></a>
+<a href="#" aria-label="LinkedIn" class="r-btn r-btn-brand" style="width: 44px; height: 44px; border-radius: 50%; background: {{brand}}; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-7M11 13.5c0-2 1.3-3.5 3-3.5s3 1 3 3.5V17"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="r-pad" style="max-width: 1440px; margin: 0 auto; padding: 0 64px 32px; box-sizing: border-box">
+<div style="margin-top: 56px; border-top: 1px solid #c9dadd; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 36px; font-size: 14px; color: #55676a">
+<span>© 2026 Bharosa Community Services Pty Ltd. ABN: 31 651 151 183</span>
+<span style="display: flex; gap: 24px"><a href="#" style="color: #55676a">Privacy Policy</a><a href="#" style="color: #55676a">Accessibility</a></span>
+</div>
+</div>
+</div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#00565e"},"accent":{"editor":"color","default":"#14cac8"},"$preview":{"width":1440,"height":8400}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+brand: this.props.brand ?? '#00565e',
+accent: this.props.accent ?? '#14cac8'
+};
+}
+}
+</script>
+</body>
+</html>

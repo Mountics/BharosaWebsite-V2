@@ -1,0 +1,145 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "About-Refresh-Phone.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "About Us Page (Refreshed) Phone",
+      "w": 390,
+      "x": 4022,
+      "y": 13208
+    },
+    "About-Refresh-Tablet.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "title": "About Us Page (Refreshed) Tablet",
+      "w": 834,
+      "x": 3108,
+      "y": 13208
+    },
+    "About-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 5600,
+      "title": "About Us Page (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 13208
+    },
+    "Contact-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 4200,
+      "title": "Contact Us Page (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 61000
+    },
+    "Refresh-Phone.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "Home Page (Refreshed) Phone",
+      "w": 390,
+      "x": 3954,
+      "y": 0
+    },
+    "Refresh-Tablet.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "Home Page (Refreshed) Tablet",
+      "w": 834,
+      "x": 3028,
+      "y": 0
+    },
+    "Refresh.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "Home Page (Refreshed)",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Service-Group-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 5600,
+      "title": "Service: Group / Centre Based Activities (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 46300
+    },
+    "Service-HIDPA-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 6050,
+      "title": "Service: High Intensity Daily Personal Activities (HIDPA) (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 39200
+    },
+    "Service-Household-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "Service: Assistance in Household Tasks (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 52300
+    },
+    "Service-Personal-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 5200,
+      "title": "Service: Assist Personal Activities (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 21400
+    },
+    "Service-Social-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 5900,
+      "title": "Service: Assistance with Social and Community Access (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 27000
+    },
+    "Service-Transport-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 5500,
+      "title": "Service: Accessible Transport Services (Refreshed)",
+      "w": 1440,
+      "x": 1588,
+      "y": 33300
+    },
+    "Services-Refresh.dc.html": {
+      "expand": "fill",
+      "h": 3900,
+      "title": "Our Services Page (Refreshed)",
+      "w": 1440,
+      "x": 68,
+      "y": 21400
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-22T06:30:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {},
+  "order": [
+    "Refresh.dc.html",
+    "Refresh-Tablet.dc.html",
+    "Refresh-Phone.dc.html",
+    "About-Refresh.dc.html",
+    "About-Refresh-Tablet.dc.html",
+    "About-Refresh-Phone.dc.html",
+    "Services-Refresh.dc.html",
+    "Service-Personal-Refresh.dc.html",
+    "Service-Social-Refresh.dc.html",
+    "Service-Transport-Refresh.dc.html",
+    "Service-HIDPA-Refresh.dc.html",
+    "Service-Group-Refresh.dc.html",
+    "Service-Household-Refresh.dc.html",
+    "Contact-Refresh.dc.html"
+  ],
+  "pages": [],
+  "title": "Bharosa Website Recreation"
+}
